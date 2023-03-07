@@ -6,7 +6,7 @@ import { FC, useEffect, useState } from 'react'
 import { TokenRefresherProps } from './typings'
 import { tokenNeedsRefresh, getToken, setToken } from '~/../../ui-shared-lite/auth'
 
-const REFRESH_INTERVAL = ms('5m')
+const REFRESH_INTERVAL = ms('30m')
 
 const TokenRefresher: FC<TokenRefresherProps> = props => {
   const [tokenInterval, setTokenInterval] = useState<any>()

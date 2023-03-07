@@ -2,7 +2,7 @@ import ms from 'ms'
 
 export type TimedPerfCallback = (this: TimedPerfCounter, metric: number, time: number) => void
 
-const RETENTION = ms('5m')
+const RETENTION = ms('30m')
 
 export class TimedPerfCounter {
   private readonly _store: { [key: number]: number } = {}

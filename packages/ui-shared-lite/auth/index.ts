@@ -9,7 +9,7 @@ import storage from '../utils/storage'
 
 export const TOKEN_KEY = 'bp/token'
 
-const MIN_MS_LEFT_BEFORE_REFRESH = ms('5m')
+const MIN_MS_LEFT_BEFORE_REFRESH = ms('30m')
 
 export const getToken = (onlyToken: boolean = true): StoredToken | string | undefined => {
   const parsedToken = storage.get<StoredToken>(TOKEN_KEY)

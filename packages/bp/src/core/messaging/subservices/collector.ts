@@ -15,7 +15,7 @@ export class MessagingCollector {
     private interactor: MessagingInteractor,
     private lifetime: MessagingLifetime
   ) {
-    this.collectingCache = new LRUCache<string, uuid>({ max: 5000, maxAge: ms('5m') })
+    this.collectingCache = new LRUCache<string, uuid>({ max: 5000, maxAge: ms('30m') })
   }
 
   set(eventId: string, messageId: uuid) {

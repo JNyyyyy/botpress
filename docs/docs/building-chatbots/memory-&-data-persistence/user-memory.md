@@ -25,7 +25,7 @@ dataRetention: {
   policies: {
     email: '60d', // Keep email for 30 days, reset if it is changed
     mood: '1d' // Forget user's mood after 1 day
-    someChoice: '5m' // Keeps the variable alive for 5 minutes
+    someChoice: '30m' // Keeps the variable alive for 5 minutes
   }
 }
 ```

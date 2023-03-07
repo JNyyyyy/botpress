@@ -216,7 +216,7 @@ export class ScopedActionService {
     const botId = incomingEvent.botId
 
     const token = jsonwebtoken.sign({ botId, scopes: ['*'], workspaceId: this.workspaceId }, process.APP_SECRET, {
-      expiresIn: '5m',
+      expiresIn: '30m',
       audience: ACTION_SERVER_AUDIENCE
     })
 

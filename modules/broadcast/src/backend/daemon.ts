@@ -91,7 +91,7 @@ export default async (botId: string, bp: typeof sdk, db: Database) => {
   }
 
   const scheduleToOutbox = async (botId: string) => {
-    const schedulingLock = await bp.distributed.acquireLock(`broadcast/lock/scheduling_${botId}`, ms('5m'))
+    const schedulingLock = await bp.distributed.acquireLock(`broadcast/lock/scheduling_${botId}`, ms('30m'))
     if (!schedulingLock) {
       return
     }
@@ -134,7 +134,7 @@ export default async (botId: string, bp: typeof sdk, db: Database) => {
 
   const sendBroadcasts = async (botId: string) => {
     try {
-      const sendingLock = await bp.distributed.acquireLock(`broadcast/lock/sending_${botId}`, ms('5m'))
+      const sendingLock = await bp.distributed.acquireLock(`broadcast/lock/sending_${botId}`, ms('30m'))
       if (!sendingLock) {
         return
       }

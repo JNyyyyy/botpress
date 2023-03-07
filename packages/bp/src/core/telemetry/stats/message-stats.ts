@@ -28,7 +28,7 @@ export class MessageStats extends TelemetryStats {
     super(ghostService, database, licenseService, jobService, telemetryRepo)
     this.url = process.TELEMETRY_URL
     this.lock = 'botpress:telemetry-new-messages'
-    this.interval = ms('5m')
+    this.interval = ms('30m')
   }
 
   protected async getStats() {

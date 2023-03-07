@@ -508,7 +508,7 @@ export class HTTPServer {
       strategy: SERVER_USER_STRATEGY,
       tokenVersion: 1,
       isSuperAdmin: false,
-      expiresIn: '5m',
+      expiresIn: '30m',
       audience: TOKEN_AUDIENCE
     })
 
